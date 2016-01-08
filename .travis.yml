@@ -1,0 +1,22 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - "0.10.40"
+
+notifications:
+  slack: 
+    secure: MYeqO72YtrBLvxnNjuDx3oCtsmRN7GHYv8BO0ZHL0CLvzCA9hVJcUArahcVVOmzV92uonS+b0tborhNj2pi+alIB48KYHmje8dZ9vCTgxmnknsFRu8waYdZeWOzS+FoDJ2I51I0ekvGHXXTmJTKQyVRwQVCCupqW4ATV9qYqITyGpW1MLNcqyApph1XoMxQmGZbHKwmvppe2ps0L/7ELWXgEvPs8Bl+N7B7c3hAyz5ofLUN6PUV2yrLuBbcH/f4U1gW+i4KjcemFOiBCM20HmHNCH4mSrbPpTwbDR0QvuxH4/JlEwjkMjbXM0GBnTv4eOYZ0AXpbXd/FEuzBW2KBo9tWfbMNq0u+UdByQEt9ymWEouZUL3x+bq+tmdQprdpiRfRJzsfQZLb9cOFE4yNMTlnB9I9u+pB8PjQaeN5UkbuNK753ss7ekHGjOZMFkSVdut+wNFv0NKepXs2QoMcrlgNs/H3oD/H2GgMZinKK2SU/LHD0eYoaWDgUXEdnZE2uM+nEVLk3uDQ8bwILceJTb9BaMoJHK3S4MYvLkZWpJXQKSak40afn2TKT7RDVoiZXfTlhKFHKE40/oOoPKhJnRNpIhKFIVpg4+QY2hRkHYzv9zFe4KfnVC8ruwucUYdsdhH177ELPXMalRwKKwpJ1gYM41bw2Z5Zz3HWA4nFpLW4=
+
+install:
+  # Install meteor
+  - "curl https://install.meteor.com | /bin/sh"
+  # Add meteor to path
+  - "export PATH=$HOME/.meteor:$PATH"
+  # Install spacejam
+  - "npm install -g spacejam"
+
+script:
+  # spacejam test-packages accepts the same arguments as meteor test-packages.
+  - "spacejam test-packages --driver-package=practicalmeteor:mocha-console-runner ./"
