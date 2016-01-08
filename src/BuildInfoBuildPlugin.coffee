@@ -1,4 +1,4 @@
-log = new ObjectLogger('BuildInfoBuildPlugin', 'debug')
+log = new ObjectLogger('BuildInfoBuildPlugin')
 
 class BuildInfoBuildPlugin
 
