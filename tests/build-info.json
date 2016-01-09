@@ -1,9 +1,9 @@
 {
+  "appVersion": "0.9.0",
+  "releaseName": "Beta",
   "AppInfo": {
-    "version": "0.9.0",
     "name": "Build Info Test Package App",
     "author": "Ronen Babayoff",
-    "email": "ronen@babayoff.com",
     "website": "http://practicalmeteor.com"
   }
 }
