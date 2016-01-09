@@ -17,7 +17,7 @@ Package.onUse(function(api) {
 
   Package.registerBuildPlugin({
     name: 'build-info',
-    use: ['coffeescript', 'practicalmeteor:loglevel@1.2.0_2', 'practicalmeteor:chai@2.1.0_1'],
+    use: ['coffeescript@1.0.11', 'practicalmeteor:loglevel@1.2.0_2', 'practicalmeteor:chai@2.1.0_1'],
     sources: ['src/BuildInfoBuildPlugin.coffee']
   });
 });
