@@ -2,7 +2,7 @@ Package.describe({
   name: 'practicalmeteor:build-info',
   version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: 'A build plugin that records the ci build number and build date in BuildInfo.',
+  summary: 'A build plugin that records the ci build number and build date in BuildInfo',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/practicalmeteor/meteor-build-info',
   // By default, Meteor will default to using README.md for documentation.
@@ -30,7 +30,7 @@ Package.onTest(function(api) {
   api.use('practicalmeteor:mocha@2.1.0_7');
   api.use('practicalmeteor:build-info@0.1.0');
 
-  api.addFiles('tests/build-info.json', ['client', 'server'], {bare: true});
+  api.addFiles('tests/build-info.json');
 
   api.addFiles('tests/BuildInfoBuildPluginTest.coffee');
 });

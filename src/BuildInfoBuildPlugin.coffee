@@ -36,7 +36,12 @@ class BuildInfoBuildPlugin
         # buildNumber should always be an int
         buildInfo.buildNumber = parseInt(buildInfo.buildNumber)
       buildInfo.buildDate = new Date().toISOString()
-      jsFileSource = "BuildInfo = #{JSON.stringify(buildInfo)};"
+      jsFileSource = """
+if (Meteor.isServer)
+  global.BuildInfo = #{JSON.stringify(buildInfo)};
+else
+  window.BuildInfo = #{JSON.stringify(buildInfo)};
+"""
       log.debug 'jsFileSource:', jsFileSource
       file.addJavaScript
         data: jsFileSource
