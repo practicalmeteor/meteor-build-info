@@ -2,9 +2,9 @@ Package.describe({
   name: 'practicalmeteor:build-info',
   version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'A build plugin that records the ci build number and build date in BuildInfo.',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/practicalmeteor/meteor-build-info',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
