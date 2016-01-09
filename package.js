@@ -2,7 +2,7 @@ Package.describe({
   name: 'practicalmeteor:build-info',
   version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: 'A build plugin that records the ci build number and build date in BuildInfo',
+  summary: 'Adds app build time info, such as the ci build number and the build date to BuildInfo.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/practicalmeteor/meteor-build-info',
   // By default, Meteor will default to using README.md for documentation.
